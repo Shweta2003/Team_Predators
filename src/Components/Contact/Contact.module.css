@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    background: black;
+    margin-bottom: 50px;
+}
+
+.main{
+    display: flex;
+    width: 100vw;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: black;
+}
+
+.in{
+    background-color: aliceblue;
+    margin: 0%;
+    padding: 0%;
+    height: 200px;
+}
+
+.top_img{
+    width: 100%;
+    height: 200px;
+    opacity: 0.6;
+    background-color: rgb(255, 255, 255);
+}
+
+.car{
+    position: absolute;
+    top: -30px;
+    left: 60px;
+    scale: 0.9;
+}
+
+.contact_page{
+    margin-left: 150px;
+    margin-top: 280px;
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    width: 40%;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+.info{
+    display: flex;
+    width: 100%;
+
+}
+
+.inte{
+    margin-left: 50px;
+}
+
+.info_type{
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    color: #9231DC;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.info_p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: white;
+}
+
+.contactform{
+    top: 80px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    box-shadow: #9231dc92 8px 8px 10px 2px;
+    right : 150px;
+    width: 35%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    border: 2px solid #9231DC;
+    padding: 30px;
+
+}
+
+.label{
+    font-size: 25px;
+    max-height: 30px;
+    transition: 0.2s;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    width: 80%;
+    margin-bottom: -35px;
+    color: #9231DC;
+}
+
+.input, .doit{
+    width: 80%;
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    padding: 5px 10px;
+    font-weight: 300;
+    background:none;
+    border: none;
+    border-bottom: 2px solid #9231DC;
+    outline: none;
+    margin-bottom: 20px;
+    color: white;
+}
+.label.yes{
+    font-size: 15px;
+    transition-duration: 0.2s;
+    margin-bottom: -5px;
+}
+
+.submit{
+    width: 200px;
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    padding: 7px;
+    color: #9231DC;
+    border-radius: 15px;
+    border: 2px solid #9231DC;
+    background: none;
+    margin-bottom: 30px;
+}
+
+.main_head{
+    font-size: 50px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 80px;
+}
+
+.out, .outa{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 60px;
+    margin-bottom: 23px;
+}
+
+.doit{
+    height: 120px;
+}
+
+.outa{
+    height: 150px;
+}
+
+
+/* responsive */
+@media (max-width: 1350px) {
+    .car{
+        left: -70px;
+        scale: 0.7;
+        top: 110px;
+    }
+
+    .main{
+        margin-bottom: 700px;
+    }
+
+    .top_img{
+        opacity: 1;
+    }
+
+    .contact_page{
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+
+    .contactform{
+        width: 75%;
+        top: 560px;
+        right: 95px;
+        padding: 10px;
+    }
+
+    .main_head{
+        color: aliceblue;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 750px){
+
+    .top_img{
+        width: 100%;
+        object-fit: contain;
+        height: auto;
+    }
+
+    .in{
+        width: 100vw;
+        height: 10px;
+    }
+
+    .car{
+        left: -145px;
+        top: -50px;
+        scale: 0.5;
+
+    }
+
+    .contact_page{
+        margin-top: 320px;
+        margin-right: auto;
+        margin-left: 40px;
+    }
+
+    .info_type{
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .info_p{
+        font-size: 15px;
+        font-weight: 300;
+        width: 180%;
+    }
+
+    .icon{
+        scale: 0.7;
+        margin-right: -30px;
+    }
+
+    .contactform{
+        right: 40px;
+        top: 600px;
+    }
+
+    .main_head{
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    .label{
+        font-size: 20px;
+        margin-bottom: -20px;
+    }
+
+    .label.yes{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .input, .doit{
+        font-size: 17px;
+        width: 70%;
+    }
+
+    .out{
+        margin-bottom: 15px;
+    }
+
+    .outa{
+        height: 150px;
+    }
+
+    .submit{
+        font-size: 20px;
+        width: 60%;
+    }
+}
+
