@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --yellow: #FFBA00;
+    --primary-color: #6204EF; 
+    --background-color: #130E10;
+    --accent-color: #9231DC;
+}
