@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react';
 import classes from './Contact.module.css';
-import top_img from '../../assets/contact_back.png';
-import car from '../../assets/car_img.png';
-import phone from '../../assets/Phone.png';
-import email from '../../assets/Gmail Logo.png';
-import map from '../../assets/Map Marker.png';
+import top_img from '../../Assets/contact_back.png';
+import car from '../../Assets/car_img.png';
+import phone from '../../Assets/Phone.png';
+import email from '../../Assets/Gmail Logo.png';
+import map from '../../Assets/Map Marker.png';
 import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {

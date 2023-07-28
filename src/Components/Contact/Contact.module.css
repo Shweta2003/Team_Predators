@@ -3,18 +3,12 @@
     padding: 0;
 }
 
-body {
-    overflow-x: hidden;
-    background: black;
-    margin-bottom: 50px;
-}
-
 .main {
     display: flex;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     flex-direction: column;
-    background-color: black;
+    padding-top: 70px;
 }
 
 .in {
@@ -33,38 +27,43 @@ body {
 
 .car {
     position: absolute;
-    top: -30px;
+    top: 50px;
     left: 60px;
     scale: 0.9;
+    background: none;
 }
 
 .contact_page {
     margin-left: 150px;
-    margin-top: 280px;
+    margin-top: 300px;
     display: flex;
     flex-direction: column;
     height: 260px;
     width: 40%;
     justify-content: space-evenly;
     margin-bottom: 100px;
+    background: none;
 }
 
 .info {
     display: flex;
     width: 100%;
+    background: none;
 
 }
 
 .inte {
     margin-left: 50px;
+    background: none;
 }
 
 .info_type {
     font-family: 'Inter', sans-serif;
     font-weight: 900;
-    color: #9231DC;
+    color: var(--accent-color);
     padding: 5px;
     font-size: 20px;
+    background: none;
 }
 
 .info_p {
@@ -72,10 +71,15 @@ body {
     font-weight: 500;
     font-size: 17px;
     color: white;
+    background: none;
+}
+
+.icon{
+    background: none;
 }
 
 .contactform {
-    top: 80px;
+    top: 150px;
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -86,7 +90,8 @@ body {
     align-items: center;
     justify-content: space-evenly;
     border-radius: 20px;
-    border: 2px solid #9231DC;
+    border: 2px solid var(--accent-color);
+    background: none;
     padding: 30px;
 
 }
@@ -99,7 +104,8 @@ body {
     font-family: 'Inter', sans-serif;
     width: 80%;
     margin-bottom: -35px;
-    color: #9231DC;
+    color: var(--accent-color);
+    background: none;
 }
 
 .input,
@@ -111,7 +117,7 @@ body {
     font-weight: 300;
     background: none;
     border: none;
-    border-bottom: 2px solid #9231DC;
+    border-bottom: 2px solid var(--accent-color);
     outline: none;
     margin-bottom: 20px;
     color: white;
@@ -129,9 +135,9 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     padding: 7px;
-    color: #9231DC;
+    color: var(--accent-color);
     border-radius: 15px;
-    border: 2px solid #9231DC;
+    border: 2px solid var(--accent-color);
     background: none;
     margin-bottom: 30px;
 }
@@ -140,6 +146,7 @@ body {
     font-size: 50px;
     font-family: 'Inter', sans-serif;
     margin-bottom: 80px;
+    background: none;
 }
 
 .out,
@@ -151,6 +158,7 @@ body {
     justify-content: flex-end;
     height: 60px;
     margin-bottom: 23px;
+    background: none;
 }
 
 .doit {
@@ -167,7 +175,7 @@ body {
     .car {
         left: -70px;
         scale: 0.7;
-        top: 110px;
+        top: 200px;
     }
 
     .main {
@@ -181,12 +189,12 @@ body {
     .contact_page {
         margin-top: 50px;
         margin-left: auto;
-        margin-right: 30px;
+        margin-right: 50px;
     }
 
     .contactform {
         width: 75%;
-        top: 560px;
+        top: 660px;
         right: 95px;
         padding: 10px;
     }
@@ -217,7 +225,7 @@ body {
         align-items: center;
         justify-content: center;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     .car {
@@ -233,7 +241,8 @@ body {
     .contact_page {
         position: relative;
         margin: 0px;
-        margin-top: -80px;
+        margin-top: -100px;
+        margin-bottom: 40px;
         width: 85%;
         top: 0px;
         right: 0px;

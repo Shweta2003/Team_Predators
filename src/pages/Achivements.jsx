@@ -1,5 +1,5 @@
 import React from 'react'
-import Achievements from '../components/Achievements/Achievements'
+import Achievements from '../Components/Achievements/Achievements'
 
 const Achivements = () => {
   return (
@@ -7,4 +7,4 @@ const Achivements = () => {
   )
 }
 
-export default Achivements
+export default Achivements;
