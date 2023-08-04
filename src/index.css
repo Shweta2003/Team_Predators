@@ -14,3 +14,9 @@
     --background-color: #130E10;
     --accent-color: #9231DC;
 }
+
+.material-symbols-outlined{
+    padding-right: 30px;
+    font-size: 30px;
+    color: white;
+}
