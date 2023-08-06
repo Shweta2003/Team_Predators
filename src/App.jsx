@@ -7,8 +7,8 @@ import {
   Teams
 } from './pages'
 import { Routes, Route } from 'react-router-dom'
-import Navbar from './Components/Navbar/Navbar'
-import Footer from './Components/Footer/Footer'
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (

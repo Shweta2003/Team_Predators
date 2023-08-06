@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import classes from './Navbar.module.css'
-import logoImg from '../../Assets/logoImg.png'
+import logoImg from '../../assets/logoImg.png'
 import { NavLink } from 'react-router-dom'
 import details from './NavDetails'
 
