@@ -94,6 +94,9 @@
     .nav .logoDiv img{
         margin-left: 0;
     }
+    .nav .menu{
+        width: fit-content;
+    }
 
     .nav .menu ul{
         display: none;

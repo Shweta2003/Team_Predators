@@ -4,9 +4,8 @@ import { motion } from 'framer-motion';
 
 const InfoBox = ({ details }) => {
     const { name, img, air, points, awards, year, achievements } = details;
-
     return (
-        <motion.div className={classes.main}>
+        <div className={classes.main}>
             <div className={classes.img}>
                 <img src={img} alt='Raptor' />
             </div>
@@ -42,7 +41,7 @@ const InfoBox = ({ details }) => {
                     )}
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 
