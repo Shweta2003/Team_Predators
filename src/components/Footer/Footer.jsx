@@ -22,12 +22,12 @@ const Footer = () => {
 
         <div className={classes.div2}>
           <p className={classes.h3}>Team <span className={classes.h}>Predators</span>  Racing</p>
-          <p className={classes.h4}><span class="material-symbols-outlined">
+          <p className={classes.h4}><span className="material-symbols-outlined">
             location_on
           </span><span>Dr. D.Y. Patil Educational Complex,<br />
             Akurdi, Pune - 411044<br />
             Maharashtra, India</span></p>
-          <p className={classes.h4}><span class="material-symbols-outlined">stacked_email</span>info@teampredatorsracing.com<br />sales@teampredatorsracing.com</p>
+          <p className={classes.h4}><span className="material-symbols-outlined">stacked_email</span>info@teampredatorsracing.com<br />sales@teampredatorsracing.com</p>
         </div>
         <div className={classes.div1}>
           <p className={classes.h1}>Social</p>

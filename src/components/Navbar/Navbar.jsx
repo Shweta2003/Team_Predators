@@ -21,8 +21,8 @@ const Navbar = () => {
             </NavLink>
             <div className={classes.menu}>
                 <ul className={`${menuOpen ? classes.open : ""}`}>
-                    {details.map((current) =>
-                        <li onClick={closeMenu}>
+                    {details.map((current, idx) =>
+                        <li onClick={closeMenu} key={idx}>
                             <NavLink to={current.route} className={({ isActive }) =>
                                 isActive ? classes.active : ""
                             }>
