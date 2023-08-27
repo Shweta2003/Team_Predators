@@ -1,11 +1,11 @@
 import React from 'react'
 import classes from './Footer.module.css'
 import { NavLink } from 'react-router-dom'
-import img1 from '../../assets/likedin.png'
-import img2 from '../../assets/Facebook.png'
-import img3 from '../../assets/instagram.png'
-import img4 from '../../assets/youtube.png'
-import img5 from '../../assets/twitter.png'
+import img1 from '../../Assets/likedin.png'
+import img2 from '../../Assets/Facebook.png'
+import img3 from '../../Assets/instagram.png'
+import img4 from '../../Assets/youtube.png'
+import img5 from '../../Assets/twitter.png'
 
 const Footer = () => {
   return (
