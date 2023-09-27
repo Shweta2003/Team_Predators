@@ -1,5 +1,5 @@
 import React from 'react'
-import IndividualPartner from '../Components/Partners/IndividualPartner'
+import IndividualPartner from '../components/Partners/IndividualPartner'
 
 const IndividualP = () => {
   return (
