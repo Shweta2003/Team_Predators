@@ -15,6 +15,7 @@
     --background-color: #130E10;
     --accent-color: #9231DC;
     --green: #137210;
+    --box-color: #333847;
 }
 
 html::-webkit-scrollbar {
@@ -37,3 +38,6 @@ html::-webkit-scrollbar-thumb {
     font-size: 30px;
     color: white;
 }
+
+
+
