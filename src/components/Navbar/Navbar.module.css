@@ -8,6 +8,11 @@
     /* box-shadow: ; */
 }
 
+.overlay{
+    height: 70px;
+    width: 100%;
+}
+
 .nav .logoDiv {
     width: 50%;
     padding: 10px;

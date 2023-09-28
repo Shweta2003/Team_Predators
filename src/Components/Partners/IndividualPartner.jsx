@@ -1,10 +1,10 @@
 import React from 'react'
-import monster from '../../Assets/monster.png'
+import monster from '../../assets/monster.png'
 import classes from './Partner.module.css'
-import a1 from '../../Assets/a1.png'
-import a2 from '../../Assets/a2.png'
-import a3 from '../../Assets/a3.png'
-import a4 from '../../Assets/a4.png'
+import a1 from '../../assets/a1.png'
+import a2 from '../../assets/a2.png'
+import a3 from '../../assets/a3.png'
+import a4 from '../../assets/a4.png'
 
 const IndividualPartner = () => {
   return (

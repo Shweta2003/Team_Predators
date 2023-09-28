@@ -1,4 +1,4 @@
-import monster from '../../Assets/monster.png'
+import monster from '../../assets/monster.png'
 
 const MyInfo = [
     {
