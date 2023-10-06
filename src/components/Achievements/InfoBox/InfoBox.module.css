@@ -6,6 +6,8 @@
     align-items: center;
     gap: 100px;
     height: 60vh;
+    overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .details{
@@ -55,18 +57,25 @@
 }
 
 .achievements{
-    /* border: red 2px solid; */
-    /* height: 10vh; */
-    /* width: 100%; */
     height: 50%;
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
-    align-self: flex-start;
+    justify-content: center;
+    justify-self: flex-start;
     flex-wrap: wrap;
     column-gap: 50px;
     width: max-content;
 }
+
+.see{
+    font-size: 22px;
+    font-weight: bolder;
+    align-items: flex-start;
+    align-self: flex-start;
+    margin-bottom: 30px;
+    color: var(--yellow);
+}
+
 .achievement{
     position: relative;
     /* border: #6204EF 2px solid; */
@@ -90,7 +99,7 @@
     color: #fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .main{
         flex-direction: column;
         height: fit-content;
@@ -109,5 +118,36 @@
         height: auto;
     }
 
+    .achievements{
+        width: 100%;
 
+    }
+
+    .out{
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .main{
+        align-items: center;
+        justify-content: center;
+    }
+    .achievements{
+        flex-direction: column;
+        width: 65%;
+        align-items: flex-start;
+        
+    }
+
+    .out{
+        width: 100%;
+    }
+
+    .overview{
+        width: 100%;
+        gap: 25px;
+    }
 }

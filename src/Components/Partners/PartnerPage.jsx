@@ -1,9 +1,9 @@
 import React from 'react'
 import classes from './Partner.module.css'
-import imga from '../../assets/raptor1.png'
-import p1 from '../../assets/Partnership.png'
-import p2 from '../../assets/donate.png'
-import p3 from '../../assets/brochure.png'
+import imga from '../../Assets/raptor1.png'
+import p1 from '../../Assets/Partnership.png'
+import p2 from '../../Assets/donate.png'
+import p3 from '../../Assets/brochure.png'
 import MyInfo from './PertnerInfo'
 import { Link } from 'react-router-dom'
 

@@ -12,10 +12,11 @@
 :root {
     --yellow: #FFBA00;
     --primary-color: #6204EF;
-    --background-color: #130E10;
+    --background-color: #222831;
     --accent-color: #9231DC;
     --green: #137210;
     --box-color: #333847;
+    --new-color: #6E6EDE;
 }
 
 html::-webkit-scrollbar {
@@ -38,6 +39,14 @@ html::-webkit-scrollbar-thumb {
     font-size: 30px;
     color: white;
 }
+
+.l1{
+    background: none;
+    padding: 0px;
+    padding-left: 8px;
+}
+
+
 
 
 

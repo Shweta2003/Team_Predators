@@ -10,7 +10,7 @@ const SocialMedia = () => {
   const date = new Date();
   var i = 1;
 
-  const token_id = "IGQWRQd21hNVd5OFlOVkpQVzYwNFZA2dHVpcnRrQy1kbF9kS0lfemZAuVDYwZAV94QWFTYU85RGMydFJsZAnF1WC1WSWEwYUZA4bFJFNkw1WUgwSHo2aTRvUGc0SXpFTHJ6LUlkNzBvOUw5bllWb3FXWEs4NXVHdldtR3MZD"
+  const token_id = "IGQWRQd21hNVd5OFlOVkpQVzYwNFZA2dHVpcnRrQy1kbF9kS0lfemZAuVDYwZAV94QWFTYU85RGMydFJsZAnF1WC1WSWEwYUZA4bFJFNkw1WUgwSHo2aTRvUGc0SXpFTHJ6LUlkNzBvOUw5bllWb3FXWEs4NXVHdldtR3MZD";
 
     useEffect(() => {
         const userFeed = new Instafeed({
@@ -18,10 +18,11 @@ const SocialMedia = () => {
           target: 'instafeed-container',
           resolution: 'standard_resolution',
           accessToken: token_id,
-          // limit: 6,
+          limit: 6,
           template:
-          '<a href = "{{link}}"><img classname = "something" title = "{{caption}}" src = "{{image}}"/><p >{{caption}}</p></a>',
+          '<></>',
           filter: function(image) {
+            // to filter by tags
             // if(image.caption.includes("#fun")){
               const time = new Date(image.timestamp)
               const diff = Math.floor((date - time)/(1000 * 60 * 60))
@@ -53,11 +54,20 @@ const SocialMedia = () => {
               }
               const newData = [image.image, image.caption, image.link, a]
               if(i%3 === 1){
-                setdataA((prevData) => [...prevData,newData])
+                if(dataA.includes(newData)){
+                  
+                }
+                else{
+                  setdataA((prevData) => [...prevData,newData])
+                }
               }else if(i%3 === 2){
-                setdataB((prevData) => [...prevData,newData])
+                if(dataA.includes(newData) === false){
+                  setdataB((prevData) => [...prevData,newData])
+                }
               }else{
-                setdataC((prevData) => [...prevData,newData])
+                if(dataA.includes(newData) === false){
+                  setdataC((prevData) => [...prevData,newData])
+                }
               }
               i ++;
             // }
@@ -75,7 +85,7 @@ const SocialMedia = () => {
     <div className={classes.main}>
     <div className={classes.first}>
     {
-      dataA.map((e) => {
+      dataA.splice(0,dataA.length/2 + 1).map((e) => {
         return <Component img={e[0]} link={e[2]} desc={e[1]} time={e[3]}/>
         
       })
@@ -83,16 +93,15 @@ const SocialMedia = () => {
     </div>
     <div className={classes.second}>
     {
-      dataB.map((e) => {
+      dataB.splice(0,dataB.length/2 + 1).map((e) => {
         return <Component img={e[0]} link={e[2]} desc={e[1]} time={e[3]}/>
       })
     }
     </div>
     <div className={classes.third}>
-      {console.log(dataC)}
     {
       
-      dataC.map((e) => {
+      dataC.splice(0,dataC.length/2 + 1).map((e) => {
         return <Component img={e[0]} link={e[2]} desc={e[1]} time={e[3]}/>
       })
     }

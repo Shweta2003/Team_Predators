@@ -9,14 +9,13 @@ import { getAuth } from 'firebase/auth'
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyDnT8vFE6MRB_TpjkzBz2bJ4RWQDkKQ6w8",
-    authDomain: "team-predators.firebaseapp.com",
-    projectId: "team-predators",
-    storageBucket: "team-predators.appspot.com",
-    messagingSenderId: "640211329320",
-    appId: "1:640211329320:web:fae8eb825ee780fe00701d",
-    measurementId: "G-0BWHBNSDSJ"
-};
+    apiKey: "AIzaSyDA8OkbR74Pdc_qbXD_2J6rs4zMa1nzof4",
+    authDomain: "team-predators-racing.firebaseapp.com",
+    projectId: "team-predators-racing",
+    storageBucket: "team-predators-racing.appspot.com",
+    messagingSenderId: "863542469633",
+    appId: "1:863542469633:web:c96695043c928b68128c00"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

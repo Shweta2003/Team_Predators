@@ -1,16 +1,28 @@
-import React, {  useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import classes from './Achievements.module.css'
-import information from './Details'
 import InfoBox from './InfoBox/InfoBox'
-
-import { db } from '../../firebase/auth'
-import { collection, getDocs, query, where } from 'firebase/firestore'
+import { GetSliderData } from '../getdata/GetSliderData';
 
 const Achievements = () => {
     const [index, setIndex] = useState(0)
+    const [sliderdata, setSlider] = useState([])
 
     const [scrollHeight, setScrollHeight] = useState(window.scrollY)
     const [isSticky, setIsSticky] = useState(true)
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const Data = await GetSliderData();
+                console.log(Data);
+                setSlider(Data);
+
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        }
+        fetchData();
+    }, []);
 
     const handleScroll = () => {
         setScrollHeight(window.scrollY)
@@ -25,46 +37,30 @@ const Achievements = () => {
 
     document.addEventListener('scroll', handleScroll)
 
-    // useEffect(() => {
-    const fetchData = async() => {
-        const collectionName = "sliderDetails"
-        const detailsRef = collection(db, collectionName)
-        const query1 = query(detailsRef, where("name", "==", "Raptor 7"))
-        const data = await getDocs(query1)
-        const details = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
-
-        console.log(details);
-    }
-    // fetchData()
-    // })
-
-    //  To do 
-    // set current raptor in a variable and fetch its data from the database and add it to the localStorage.
-
-
     return (
         <div className={classes.main}>
-            <div className={classes.slider} style={{ position: `${isSticky ? "sticky" : "static"}` }}>
-                {
-                    information.sliderImages.map((current, idx) => (
-                        <div key={idx} className={`${idx === index ? classes.active : ""} ${classes.element}`}>
-                            <img
-                                onClick={() => setIndex(idx)}
-                                className={`${idx === index ? classes.active : ""}`}
-                                src={current.img}
-                                alt={current.name}
-                            />
-                            <p className={classes.name}>
-                                {current.name}
-                            </p>
-                        </div>
-                    ))
-                }
+            <div className={classes.dummy} style={{ position: `${isSticky ? "sticky" : "static"}` }}>
+                <div className={classes.slider} >
+                    {
+                        sliderdata.map((current, idx) => (
+                            <div key={idx} className={`${idx === index ? classes.active : ""} ${classes.element}`}>
+                                <img
+                                    onClick={() => setIndex(idx)}
+                                    className={`${idx === index ? classes.active : ""}`}
+                                    src={current.image}
+                                    alt={current.name}
+                                />
+                                <p className={classes.name}>
+                                    {current.name}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
             <div className={classes.details} >
-                <InfoBox details={information.sliderDetails[index]} />
+                <InfoBox details={sliderdata[index]?.achievements} />
             </div>
-            <div style={{ color: "#fff",marginTop: "20px" }} onClick={fetchData}>This is the info class</div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import PartnerPage from '../components/Partners/PartnerPage'
+import PartnerPage from '../Components/Partners/PartnerPage'
 
 const Partners = () => {
   return (
