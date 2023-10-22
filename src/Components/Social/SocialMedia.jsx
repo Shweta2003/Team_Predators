@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Instafeed from 'instafeed.js';
 import Component from './Component';
 import classes from './Social.module.css'
+// import "dotenv/config"
 
 const SocialMedia = () => {
   const [dataA, setdataA] = useState([])
@@ -10,7 +11,7 @@ const SocialMedia = () => {
   const date = new Date();
   var i = 1;
 
-  const token_id = "IGQWRQd21hNVd5OFlOVkpQVzYwNFZA2dHVpcnRrQy1kbF9kS0lfemZAuVDYwZAV94QWFTYU85RGMydFJsZAnF1WC1WSWEwYUZA4bFJFNkw1WUgwSHo2aTRvUGc0SXpFTHJ6LUlkNzBvOUw5bllWb3FXWEs4NXVHdldtR3MZD";
+  const token_id = process.env.REACT_APP_InstagramID
 
     useEffect(() => {
         const userFeed = new Instafeed({
@@ -75,6 +76,9 @@ const SocialMedia = () => {
     // return (image.caption.includes("#fun"));
   }
         });
+        console.log("DataA", dataA);
+        console.log("DataB", dataB);
+        console.log("DataC", dataC);
         userFeed.run();
       }, []);
 
@@ -85,15 +89,15 @@ const SocialMedia = () => {
     <div className={classes.main}>
     <div className={classes.first}>
     {
-      dataA.splice(0,dataA.length/2 + 1).map((e) => {
-        return <Component img={e[0]} link={e[2]} desc={e[1]} time={e[3]}/>
+      dataA.map((e, i) => {
+        return <Component img={e[0]} link={e[2]} desc={e[1]} time={e[3]} key={i}/>
         
       })
     }
     </div>
     <div className={classes.second}>
     {
-      dataB.splice(0,dataB.length/2 + 1).map((e) => {
+      dataB.map((e) => {
         return <Component img={e[0]} link={e[2]} desc={e[1]} time={e[3]}/>
       })
     }
@@ -101,7 +105,7 @@ const SocialMedia = () => {
     <div className={classes.third}>
     {
       
-      dataC.splice(0,dataC.length/2 + 1).map((e) => {
+      dataC.map((e) => {
         return <Component img={e[0]} link={e[2]} desc={e[1]} time={e[3]}/>
       })
     }
