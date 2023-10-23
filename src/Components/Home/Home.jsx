@@ -11,6 +11,7 @@ import { Car } from '../common/Car'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Carousel from '../common/Carousel/Carousel'
+import CarModel from '../common/Model/CarModel'
 
 const Home = () => {
   const [slideImg, setSlide] = useState(null);
@@ -35,25 +36,9 @@ const Home = () => {
     <div className={classes.body}>
       <div className={classes.D3model}>
         <div className={classes.carDiv}>
-          {/* <Canvas >
-            <Suspense fallback={null}>
-              <perspectiveCamera makeDefault position={[0, 0, 5]} fov={75} />
-              <OrbitControls />
-              <ambientLight intensity={0.1} />
-              <spotLight position={[2, 1, 0]} angle={.7} penumbra={.1} intensity={50} color={"green"}/>
-              <spotLight position={[-2, 1, 0]} angle={.7} penumbra={.1} intensity={50} color={"red"}/>
-              <mesh position={[0, 10, 0]} >
-                <rectAreaLight height={10} width={10} intensity={150} color={"white"} />
-              </mesh>
-              <Car />
-              <mesh rotation={[-Math.PI / 2, 0, 0]}>
-                <planeGeometry args={[100, 100]} />
-                <meshBasicMaterial color="#222831" />
-              </mesh>
-            </Suspense>
-          </Canvas> */}
+          <CarModel />
         </div>
-        <div className={classes.scrollOverlay}></div>
+        {/* <div className={classes.scrollOverlay}></div> */}
         <div className={classes.scrollDiv}>
           <section>
             <h1>
