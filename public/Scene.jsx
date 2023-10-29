@@ -10,7 +10,7 @@ Title: Rossa
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Car(props) {
+export function Model(props) {
   const { nodes, materials } = useGLTF('/scene.gltf')
   return (
     <group {...props} dispose={null}>

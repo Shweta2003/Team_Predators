@@ -100,7 +100,7 @@ const Home = () => {
       {/* media gallery */}
       <div className={classes.part4}>
         <h1 className={classes.hh}>MEDIA GALLERY</h1>
-        <SocialMedia />
+        {/* <SocialMedia /> */}
       </div>
 
       {/* recent partners */}
