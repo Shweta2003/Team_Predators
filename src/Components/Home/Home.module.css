@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-.body{
+.body {
     width: 100%;
     overflow-x: hidden;
     display: flex;
@@ -13,65 +13,136 @@
     padding-top: 30px;
 }
 
-.D3model{
-    width: 95%;
+.D3model {
+    width: 100vw;
     height: 80vh;
-    background: white;
+    display: flex;
+    background: transparent;
+    /* border: 2px solid red; */
+    position: relative;
 }
 
-.part2{
+.carDiv {
+    /* border: 2px solid red; */
+    /* border: 2px solid green; */
+    width: 70%;
+}
+
+.scrollDiv {
+    top: 0%;
+    right: 0%;
+    /* position: absolute; */
+    /* border: 2px solid blue; */
+    width: 30%;
+    background: transparent;
+    color: #fff;
+    overflow-y: scroll;
+    height: 100%;
+    padding: 0 20px 0 10px;
+    box-sizing: border-box;
+}
+
+.scrollOverlay {
+    position: absolute;
+    z-index: 3;
+    top: 0%;
+    right: 0%;
+    /* border: 2px solid blue; */
+    width: 30%;
+    background: linear-gradient(var(--background-color), var(--background-color), transparent,transparent, var(--background-color), var(--background-color));
+    height: 100%;
+    pointer-events: none;
+}
+
+.scrollDiv section{
+    box-sizing: border-box;
+    /* padding: 10px; */
+    width: 100%;
+}
+
+.scrollDiv section:nth-child(1) {
+    margin-top: 50%;
+}
+
+.scrollDiv section:last-child {
+    margin-bottom: 50%;
+}
+
+.scrollDiv::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.scrollDiv section h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.scrollDiv section p {
+    /* padding: 5px; */
+    /* font-size: 1.5rem; */
+    font-weight: 400;
+    opacity: .5;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.part2 {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.im{
+.im {
     width: 50%;
     padding-bottom: 60px;
 }
 
-.img1, .img2{
+.img1,
+.img2 {
     width: 350px;
     height: 250px;
 }
 
-.img1{
+.img1 {
     margin-top: 130px;
     transform: rotate(6.102deg);
     float: right;
     margin-right: 80px;
 }
 
-.img2{
+.img2 {
     transform: rotate(-11.297deg);
     margin-top: -80px;
     margin-left: 80px;
 }
 
-.do{
+.do {
     width: 50%;
     padding: 40px;
 }
 
-.p{
+.p {
     color: var(--new-color);
     font-size: 25px;
     margin-bottom: -20px;
 }
 
-.h2{
+.h2 {
     color: white;
     padding: 30px 0px;
     font-size: 50px;
 }
 
-.details{
+.details {
     color: white;
     font-size: 20px;
 }
 
-.btn{
+.btn {
     padding: 10px 30px;
     margin-top: 100px;
     background: none;
@@ -82,27 +153,29 @@
 }
 
 /* slider */
-.part3{
+.part3 {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-.slider{
+.slider {
     display: flex;
     overflow-x: hidden;
     transform: translateX(-180px);
     width: calc(100% + 180px);
 }
 
-.try{
+.try {
     width: 600px;
     height: 300px;
     margin: 0px 20px;
 }
 
-.lbtn, .rbtn{
+.lbtn,
+.rbtn {
     position: absolute;
     background-color: black;
     margin-top: -170px;
@@ -113,23 +186,23 @@
     cursor: pointer;
 }
 
-.rbtn{
+.rbtn {
     left: auto;
     right: 360px;
 }
 
-.rbtn:hover{
+.rbtn:hover {
     opacity: 1;
     transform: scale(1.1);
 }
 
-.lbtn:hover{
+.lbtn:hover {
     opacity: 1;
     transform: scale(1.1);
 }
 
 
-.part4{
+.part4 {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -137,12 +210,12 @@
     justify-content: center;
 }
 
-.hh{
+.hh {
     color: var(--new-color);
     font-size: 50px;
 }
 
-.part5{
+.part5 {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -150,7 +223,7 @@
     justify-content: center;
 }
 
-.r{
+.r {
     width: 100%;
     display: flex;
     background-color: var(--box-color);
@@ -159,7 +232,7 @@
     justify-content: center;
 }
 
-.partner{
+.partner {
     width: 100%;
     display: flex;
     background: none;
@@ -168,20 +241,20 @@
     flex-wrap: wrap;
 }
 
-.hh1{
+.hh1 {
     color: rgba(227, 191, 255, 0.75);
     font-size: 50px;
     margin-bottom: 40px;
 }
 
-.partr{
+.partr {
     background-color: var(--box-color);
     padding: 40px;
     width: 90px;
     cursor: pointer;
 }
 
-.ab{
+.ab {
     padding: 15px 30px;
     font-size: 17px;
     font-weight: bolder;
@@ -192,7 +265,7 @@
     margin-bottom: 40px;
 }
 
-.part6{
+.part6 {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -201,7 +274,7 @@
     margin-top: 200px;
 }
 
-.contact{
+.contact {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -209,102 +282,131 @@
     justify-content: center;
 }
 
-.ccc{
+.ccc {
     width: 50%;
-    object-fit:scale-down;
+    object-fit: scale-down;
 }
 
-.cd{
+.cd {
     width: 35%;
 }
 
-.cp{
+.cp {
     color: white;
     font-size: 50px;
     font-weight: bolder;
 }
 
-@media (max-width: 850px){
+@media (max-width: 850px) {
+    .D3model{
+        flex-direction: column;
+        height: auto;
+    }
 
-    .part2{
+    .carDiv{
+        height: 60vh;
+        width: 100%;
+    }
+    .scrollDiv{
+        width: 100%;
+        height: auto;
+        padding: 0;
+        display: flex;
         flex-wrap: wrap;
     }
-    
-    .do{
+    .scrollDiv section{
+        width: 50%;
+        padding: 10px;
+    }
+    .scrollDiv section:nth-child(1) {
+        margin-top: 0%;
+    }
+    .scrollOverlay{
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    .part2 {
+        flex-wrap: wrap;
+    }
+
+    .do {
         width: 100%;
     }
 
-    .cp{
+    .cp {
         font-size: 40px;
     }
 
-    .ccc{
+    .ccc {
         margin-left: -40px;
     }
 
-    .btn{
+    .btn {
         margin-top: 70px;
     }
 
-    .part6{
+    .part6 {
         margin-top: 100px;
         margin-bottom: 100px;
     }
 }
 
-@media (max-width: 450px){
-    .im{
+@media (max-width: 450px) {
+    .im {
         transform: scale(0.6);
         margin-bottom: -100px;
     }
 
-    .img1{
+    .img1 {
         margin-top: 40px;
         margin-right: -150px;
     }
 
-    .img2{
+    .img2 {
         margin-left: -160px;
     }
 
-    .p{
+    .p {
         font-size: 25px;
     }
 
-    .h2{
+    .h2 {
         font-size: 30px;
     }
 
-    .hh, .hh1{
+    .hh,
+    .hh1 {
         font-size: 35px;
         text-align: center;
         padding: 0px 20px;
     }
 
-    .contact{
+    .contact {
         font-size: 40px;
     }
 
-    .ccc{
+    .ccc {
         margin: 0px;
         width: 100%;
-        
+
     }
 
-    .cd{
+    .cd {
         width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .cp{
+    .cp {
         font-size: 30px;
         text-align: center;
         margin-top: 30px;
     }
 
-    .ab{
+    .ab {
         font-size: 13px;
         padding: 10px 20px;
         font-weight: 500;
