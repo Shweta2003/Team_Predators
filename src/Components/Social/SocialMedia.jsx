@@ -10,7 +10,7 @@ const SocialMedia = () => {
   const date = new Date();
   var i = 1;
 
-  const token_id = "IGQWRQd21hNVd5OFlOVkpQVzYwNFZA2dHVpcnRrQy1kbF9kS0lfemZAuVDYwZAV94QWFTYU85RGMydFJsZAnF1WC1WSWEwYUZA4bFJFNkw1WUgwSHo2aTRvUGc0SXpFTHJ6LUlkNzBvOUw5bllWb3FXWEs4NXVHdldtR3MZD";
+  const token_id = "";
 
     useEffect(() => {
         const userFeed = new Instafeed({
