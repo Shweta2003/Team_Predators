@@ -36,7 +36,7 @@ const Home = () => {
     <div className={classes.body}>
       <div className={classes.D3model}>
         <div className={classes.carDiv}>
-          {/* <CarModel /> */}
+          <CarModel />
         </div>
         {/* <div className={classes.scrollOverlay}></div> */}
         <div className={classes.scrollDiv}>
