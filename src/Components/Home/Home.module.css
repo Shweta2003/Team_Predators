@@ -15,65 +15,41 @@
 
 .D3model {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
-    background: transparent;
-    /* border: 2px solid red; */
-    position: relative;
+    flex-direction: column;
+    /* background: transparent; */
 }
 
 .carDiv {
     /* border: 2px solid red; */
     /* border: 2px solid green; */
-    width: 70%;
+    width: 100%;
+    height: 80vh;
 }
 
 .scrollDiv {
-    top: 0%;
-    right: 0%;
-    /* position: absolute; */
-    /* border: 2px solid blue; */
-    width: 30%;
-    background: transparent;
-    color: #fff;
-    overflow-y: scroll;
-    height: 100%;
-    padding: 0 20px 0 10px;
-    box-sizing: border-box;
-}
-
-.scrollOverlay {
-    position: absolute;
-    z-index: 3;
-    top: 0%;
-    right: 0%;
-    /* border: 2px solid blue; */
-    width: 30%;
-    background: linear-gradient(var(--background-color), var(--background-color), transparent,transparent, var(--background-color), var(--background-color));
-    height: 100%;
-    pointer-events: none;
-}
-
-.scrollDiv section{
-    box-sizing: border-box;
-    /* padding: 10px; */
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 20px;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+    /* margin-bottom: 300px; */
+    height: fit-content;
 }
 
-.scrollDiv section:nth-child(1) {
-    margin-top: 50%;
-}
-
-.scrollDiv section:last-child {
-    margin-bottom: 50%;
-}
-
-.scrollDiv::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+.scrollDiv section {
+    background: #111;
+    padding: 20px;
+    /* height: max-content; */
 }
 
 .scrollDiv section h1 {
+    background: none;
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
@@ -81,13 +57,13 @@
 }
 
 .scrollDiv section p {
-    /* padding: 5px; */
-    /* font-size: 1.5rem; */
-    font-weight: 400;
+    background: none;
     opacity: .5;
-    text-align: center;
+    text-align: justify;
     margin-bottom: 1rem;
 }
+
+
 
 .part2 {
     width: 100%;
@@ -298,35 +274,20 @@
 }
 
 @media (max-width: 850px) {
-    .D3model{
+    .D3model {
         flex-direction: column;
         height: auto;
     }
 
-    .carDiv{
+    .carDiv {
         height: 60vh;
         width: 100%;
     }
-    .scrollDiv{
-        width: 100%;
-        height: auto;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
+
+    .scrollDiv {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .scrollDiv section{
-        width: 50%;
-        padding: 10px;
-    }
-    .scrollDiv section:nth-child(1) {
-        margin-top: 0%;
-    }
-    .scrollOverlay{
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-    }
+
     .part2 {
         flex-wrap: wrap;
     }
@@ -354,6 +315,10 @@
 }
 
 @media (max-width: 450px) {
+    .scrollDiv {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .im {
         transform: scale(0.6);
         margin-bottom: -100px;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { Suspense } from 'react'
@@ -6,11 +6,17 @@ import { Car } from '../Car'
 
 
 const CarModel = () => {
+    const [rotate, setRotate] = useState(false)
+    useEffect(() => {
+        setTimeout(() => {
+            setRotate(true)
+        }, 3000)
+    }, [])
     return (
         <Canvas shadows={true} >
             <Suspense fallback={null}>
                 {/* <perspectiveCamera makeDefault position={[0, 0, 10]} fov={710} /> */}
-                <OrbitControls maxPolarAngle={1.5} minPolarAngle={1} />
+                <OrbitControls maxPolarAngle={1.5} minPolarAngle={1} enableZoom={false} autoRotate={rotate}/>
                 {/* <OrbitControls /> */}
                 <ambientLight intensity={5} />
                 <spotLight
@@ -32,23 +38,23 @@ const CarModel = () => {
                 </mesh> */}
                 <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]} receiveShadow={true}>
                     <planeGeometry args={[20, 20]} />
-                    <meshStandardMaterial color="#222831" />
+                    <meshStandardMaterial color="#000" />
                 </mesh>
                 <mesh position={[-10, 10, 0]} rotation={[0, Math.PI / 2, 0]}>
                     <planeGeometry args={[20, 20]} />
-                    <meshStandardMaterial color="#222831" />
+                    <meshStandardMaterial color="#000" />
                 </mesh>
                 <mesh position={[0, 10, -10]}>
                     <planeGeometry args={[20, 20]} />
-                    <meshStandardMaterial color="#222831" />
+                    <meshStandardMaterial color="#000" />
                 </mesh>
                 <mesh position={[10, 10, 0]} rotation={[0, -Math.PI / 2, 0]}>
                     <planeGeometry args={[20, 20]} />
-                    <meshStandardMaterial color="#222831" />
+                    <meshStandardMaterial color="#000" />
                 </mesh>
                 <mesh position={[0, 10, 10]} rotation={[0, -Math.PI, 0]}>
                     <planeGeometry args={[20, 20]} />
-                    <meshStandardMaterial color="#222831" />
+                    <meshStandardMaterial color="#000" />
                 </mesh>
             </Suspense>
         </Canvas>

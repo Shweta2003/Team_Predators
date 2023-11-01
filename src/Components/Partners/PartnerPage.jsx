@@ -19,7 +19,7 @@ const PartnerPage = () => {
                 <div className={classes.mmar}></div>
                 <div className={classes.lmara}>
                     <h2 className={classes.c1}>Be a Part of Our Journey!</h2>
-                    <p className={classes.p}>'<span style={{color:"#9231DC"}}>Team Predators Racing</span>’ is a non-profit student organization where the growing engineers learn soft skills along with technical skills. With Baja as a platform for industrial exposure, we have established various acquaintances along the way. Be it technical guidance, production help, financial aid or logistics, our sponsors have always had our backs and we are really grateful for the same. Their contributions made it possible for us to operate, build and thus win. To connect with us, approach our sales team</p>
+                    <p className={classes.p}>'<span style={{color:"#0c7808"}}>Team Predators Racing</span>’ is a non-profit student organization where the growing engineers learn soft skills along with technical skills. With Baja as a platform for industrial exposure, we have established various acquaintances along the way. Be it technical guidance, production help, financial aid or logistics, our sponsors have always had our backs and we are really grateful for the same. Their contributions made it possible for us to operate, build and thus win. To connect with us, approach our sales team</p>
                     <button className={classes.bt}>Sales Team</button>
                 </div>
             </div>

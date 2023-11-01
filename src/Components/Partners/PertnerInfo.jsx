@@ -3,42 +3,42 @@ import monster from '../../Assets/monster.png'
 const MyInfo = [
     {
         ima:{monster},
-        color:"#9231DC",
+        color:"#0c7808",
         link:"monster"
     },
     {
         ima:{monster},
-        color:"#9231DC",
+        color:"#0c7808",
         link:"monster"
     },
     {
         ima:{monster},
-        color:"#9231DC",
+        color:"#0c7808",
         link:"monster"
     },
     {
         ima:{monster},
-        color:"#9231DC",
+        color:"#0c7808",
         link:"monster"
     },
     {
         ima:{monster},
-        color:"#137210",
+        color:"#0c7808",
         link:"monster"
     },
     {
         ima:{monster},
-        color:"#137210",
+        color:"#0c7808",
         link:"monster"
     },
     {
         ima:{monster},
-        color:"#137210",
+        color:"#0c7808",
         link:"monster"
     },
     {
         ima:{monster},
-        color:"#137210",
+        color:"#0c7808",
         link:"monster"
     }
 ]

@@ -11,12 +11,12 @@
 
 :root {
     --yellow: #FFBA00;
-    --primary-color: #6204EF;
-    --background-color: #222831;
-    --accent-color: #9231DC;
-    --green: #137210;
+    --primary-color: #0c7808;
+    --background-color: #000;
+    --accent-color: #0c7808;
+    --green: #0c7808;
     --box-color: #333847;
-    --new-color: #6E6EDE;
+    --new-color: #0c7808;
 }
 
 html::-webkit-scrollbar {
