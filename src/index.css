@@ -46,7 +46,9 @@ html::-webkit-scrollbar-thumb {
     padding-left: 8px;
 }
 
-
-
+.swiper-button-prev, .swiper-button-next{
+    background: none;
+    color: var(--green);
+}
 
 
