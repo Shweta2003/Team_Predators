@@ -39,7 +39,7 @@
 }
 
 .box h2{
-    color: #6204EF;
+    color: var(--primary-color);
     font-size: 30px;
 }
 
@@ -73,7 +73,7 @@
     align-items: flex-start;
     align-self: flex-start;
     margin-bottom: 30px;
-    color: var(--yellow);
+    color: var(--green);
 }
 
 .achievement{
@@ -90,7 +90,7 @@
     height: 30px;
     width: 2px;
     /* margin-right: 100px; */
-    background-color: #6204EF; 
+    background-color: var(--green); 
 }
 
 .achievement p{

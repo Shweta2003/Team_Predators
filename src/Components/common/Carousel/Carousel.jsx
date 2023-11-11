@@ -3,7 +3,9 @@ import classes from './Carousel.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useSwiper, useSwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import "swiper/css/bundle"
+
+import "swiper/css/navigation"
+import "swiper/css"
 
 
 const array = [

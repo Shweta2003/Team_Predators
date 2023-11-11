@@ -45,7 +45,7 @@ const Home = () => {
               BAJA
             </h1>
             <p>
-              BAJA SAE is an inter collegiate off-road competition run by the Society of Automotive Engineers. It challenges engineering students to design, build and race an off-road vehicle that can withstand the toughest elements of rough terrain. The competition tests the participating teams in various static and dynamic events, on the basis of detailed engineering principles that were used in developing each subsystem of the vehicle.
+              BAJA SAE is an inter collegiate off-road competition run by the Society of Automotive Engineers. It challenges engineering students to design, build and race an off-road vehicle that can withstand the toughest elements of rough terrain.
             </p>
           </section>
           <section>
