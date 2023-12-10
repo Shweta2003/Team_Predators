@@ -4,7 +4,6 @@ import { OrbitControls } from '@react-three/drei'
 import { Suspense } from 'react'
 import { Car } from '../Car'
 
-
 const CarModel = () => {
     const [rotate, setRotate] = useState(false)
     useEffect(() => {
@@ -13,10 +12,10 @@ const CarModel = () => {
         }, 3000)
     }, [])
     return (
-        <Canvas shadows={true} >
-            <Suspense fallback={null}>
+        <Suspense fallback={null}>
+            <Canvas shadows={true}>
                 {/* <perspectiveCamera makeDefault position={[0, 0, 10]} fov={710} /> */}
-                <OrbitControls maxPolarAngle={1.5} minPolarAngle={1} enableZoom={false} autoRotate={rotate}/>
+                <OrbitControls maxPolarAngle={1.5} minPolarAngle={1} enableZoom={false} autoRotate={rotate} />
                 {/* <OrbitControls /> */}
                 <ambientLight intensity={5} />
                 <spotLight
@@ -27,11 +26,11 @@ const CarModel = () => {
                     penumbra={.8}
                     decay={1}
                     angle={0.52}
-                    intensity={100}
+                    intensity={150}
                     color={"#fff"}
                 />
                 <spotLight position={[3, 1, 0]} rotation={[0, 0, Math.PI / 2]} intensity={1} />
-                <Car />
+                {/* <Car /> */}
                 {/* <mesh position={[0, 2, 0]} castShadow={true}>
                     <boxGeometry args={[1, 1, 1]} />
                     <meshStandardMaterial color="#fff" />
@@ -56,8 +55,8 @@ const CarModel = () => {
                     <planeGeometry args={[20, 20]} />
                     <meshStandardMaterial color="#000" />
                 </mesh>
-            </Suspense>
-        </Canvas>
+            </Canvas>
+        </Suspense>
     )
 }
 

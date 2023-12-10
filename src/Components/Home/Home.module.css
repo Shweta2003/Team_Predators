@@ -15,48 +15,52 @@
 
 .D3model {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
-    /* background: transparent; */
+    position: relative;
 }
 
 .carDiv {
-    /* border: 2px solid red; */
-    /* border: 2px solid green; */
     width: 100%;
-    height: 80vh;
+    height: 100vh;
 }
 
-.scrollDiv {
+.scrollOverlay{
+    height: 100vh;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    align-items: center;
-    grid-gap: 20px;
-    color: #fff;
+    position: absolute;
+    background: none;
+    border: red 2px solid;
+    overflow-y: scroll;
+}
+
+.scrollDiv{
+    width: 100%;
+    position: relative;
+    background: none;
+}
+
+.scrollOverlay section {
     box-sizing: border-box;
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    background: red;
+    width: 200px;
     padding: 20px;
-    /* margin-bottom: 300px; */
-    height: fit-content;
 }
 
-.scrollDiv section {
-    background: #111;
-    padding: 20px;
-    /* height: max-content; */
-}
-
-.scrollDiv section h1 {
+.scrollOverlay section h1 {
     background: none;
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
+    color: #fff;
 }
 
-.scrollDiv section p {
+.scrollOverlay section p {
     background: none;
     opacity: .5;
     text-align: justify;

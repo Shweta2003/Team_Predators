@@ -27,7 +27,7 @@ const Footer = () => {
           </span><span>Dr. D.Y. Patil Educational Complex,<br />
             Akurdi, Pune - 411044<br />
             Maharashtra, India</span></p>
-          <p className={classes.h4}><span className="material-symbols-outlined">stacked_email</span>info@teampredatorsracing.com<br />sales@teampredatorsracing.com</p>
+          <p className={classes.h4}><span className="material-symbols-outlined">stacked_email</span>captain@teampredatorsracing.com</p>
         </div>
         <div className={classes.div1}>
           <p className={classes.h1}>Social</p>
