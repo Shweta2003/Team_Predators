@@ -12,6 +12,7 @@ import Footer from './Components/Footer/Footer'
 import Moments from './pages/Moments'
 import Teams from './pages/Teams'
 import Gallery from './Components/common/Gallery/Gallery'
+import PartnerCrit from './Components/Partners/PartnerCrit'
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/partners' element={<Partners />} />
         <Route path='/teams' element={<Teams/>} />
         <Route path='/partners/:id' element={<IndividualP/>} />
+        <Route path='/partners/criteria' element={<PartnerCrit/>} />
         <Route path='/moments' element={<Moments/>} />
         <Route path='/gallery' element={<Gallery/>} />
       </Routes>

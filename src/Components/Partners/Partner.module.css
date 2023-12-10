@@ -89,6 +89,7 @@
 .btn1{
     padding: 20px;
     background-color: white;
+    cursor: pointer;
     border-radius: 9px;
     box-shadow: 6px 0px 18px 10px rgba(0, 0, 0, 0.45) inset;
 }

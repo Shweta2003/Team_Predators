@@ -5,9 +5,13 @@ import p1 from '../../Assets/Partnership.png'
 import p2 from '../../Assets/donate.png'
 import p3 from '../../Assets/brochure.png'
 import MyInfo from './PertnerInfo'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const PartnerPage = () => {
+    const navigate = useNavigate();
+    const goto = () => {
+        navigate("/partners/criteria")
+    }
   return (
     <div className={classes.main}>
         <div className={classes.top}>
@@ -25,7 +29,7 @@ const PartnerPage = () => {
             </div>
 
             <div className={classes.btn_sec}>
-                <button className={classes.btn1}>
+                <button className={classes.btn1} onClick={goto}>
                     <img src={p1} alt='' className={classes.p1}/>
                     <h3 className={classes.btn_info}>Become a Partner</h3>
                 </button>
