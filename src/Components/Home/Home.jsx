@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from 'react'
+import React, { useState, useEffect } from 'react'
 import classes from './Home.module.css'
 import img1 from '../../Assets/raptor3d.jpg'
 import img2 from '../../Assets/raptor5d.jpg'
@@ -7,9 +7,6 @@ import { GetHomeSlider } from '../getdata/GetHomeSlider'
 import SocialMedia from '../Social/SocialMedia'
 import { GetRecentPartner } from '../getdata/GetRecentPartner'
 import img from '../../Assets/cont.png'
-import { Car } from '../common/Car'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
 import Carousel from '../common/Carousel/Carousel'
 import CarModel from '../common/Model/CarModel'
 
@@ -30,7 +27,21 @@ const Home = () => {
       // getPartner(data);
     }
     deal();
+    const divElement = document.getElementById('scrollO');
+    const sectionElements = document.getElementsByClassName('section');
+    divElement.addEventListener('scroll', () => {
+      for (let i = 0; i < sectionElements.length; i++) {
+        const element = sectionElements[i];
+        const rect = element.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          element.classList.add('active');
+        } else {
+          element.classList.remove('active');
+        }
+      }
+    })
   }, [])
+
 
   return (
     <div className={classes.body}>
@@ -38,45 +49,45 @@ const Home = () => {
         <div className={classes.carDiv}>
           <CarModel />
         </div>
-        {/* <div className={classes.scrollOverlay}></div> */}
-        <div className={classes.scrollDiv}>
-          <section>
-            <h1>
-              BAJA
-            </h1>
-            <p>
-              BAJA SAE is an inter collegiate off-road competition run by the Society of Automotive Engineers. It challenges engineering students to design, build and race an off-road vehicle that can withstand the toughest elements of rough terrain.
-            </p>
-          </section>
-          <section>
-            <h1>
-              WE
-            </h1>
-            <p>
-              We are a family of engineers where each member work towards the realization of a single dream, which is to emerge victorious. We participate in BAJA SAEINDIA and BAJA SAE International to fuel our passion for creating an All-Terrain Vehicle which has the capability to Win.
-            </p>
-          </section>
-          <section>
-            <h1>
-              PARTNERS
-            </h1>
-            <p>
-              We would like to express sincere gratitude towards all our partners. With them, we have experienced industrial life, a strong exchange of technology and paved our way towards success. Their continuous support makes it possible for us to bring home glory.
-            </p>
-          </section>
-          <section>
-            <h1>
-              Support Us
-            </h1>
-            <p>
-              Dreams aspirations are not easily obtained but one of the hardest things to do is to keep going is to keep chasing.
-              Being a Predator we will definitely strive for success but we want you to be our support while carrying this responsibility.
-              Contribute to a cause, Be a Predator with us.
-            </p>
-          </section>
+        <div className={classes.scrollOverlay} id="scrollO" >
+          <div className={classes.scrollDiv}>
+            <section style={{ "--top": "500px", "--left": "500px" }} className='section'>
+              <h1>
+                BAJA
+              </h1>
+              <p>
+                BAJA SAE is an inter collegiate off-road competition run by the Society of Automotive Engineers. It challenges engineering students to design, build and race an off-road vehicle that can withstand the toughest elements of rough terrain.
+              </p>
+            </section >
+            <section style={{ "--top": "500px", "--left": "500px" }} className='section'>
+              <h1>
+                WE
+              </h1>
+              <p>
+                We are a family of engineers where each member work towards the realization of a single dream, which is to emerge victorious. We participate in BAJA SAEINDIA and BAJA SAE International to fuel our passion for creating an All-Terrain Vehicle which has the capability to Win.
+              </p>
+            </section>
+            <section style={{ "--top": "500px", "--left": "500px" }} className='section'>
+              <h1>
+                PARTNERS
+              </h1>
+              <p>
+                We would like to express sincere gratitude towards all our partners. With them, we have experienced industrial life, a strong exchange of technology and paved our way towards success. Their continuous support makes it possible for us to bring home glory.
+              </p>
+            </section>
+            <section style={{ "--top": "500px", "--left": "500px" }} className='section'>
+              <h1>
+                Support Us
+              </h1>
+              <p>
+                Dreams aspirations are not easily obtained but one of the hardest things to do is to keep going is to keep chasing.
+                Being a Predator we will definitely strive for success but we want you to be our support while carrying this responsibility.
+                Contribute to a cause, Be a Predator with us.
+              </p>
+            </section>
+          </div>
         </div>
       </div>
-
       {/* what we do */}
       <div className={classes.part2}>
         <div className={classes.im}>

@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react'
 import classes from './Achievements.module.css'
 import InfoBox from './InfoBox/InfoBox'
 import { GetSliderData } from '../getdata/GetSliderData';
+import { useLocation } from 'react-router-dom';
 
 const Achievements = () => {
-    const [index, setIndex] = useState(0)
+    const location = useLocation()
+    const {activeIndex} = location.state || {activeIndex: 0}
+    const [index, setIndex] = useState(activeIndex || 0)
     const [sliderdata, setSlider] = useState([])
 
     const [scrollHeight, setScrollHeight] = useState(window.scrollY)
