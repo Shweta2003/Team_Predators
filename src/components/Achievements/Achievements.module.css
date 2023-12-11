@@ -19,8 +19,6 @@
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    position: sticky;
-    position: -webkit-sticky;
     top: 70px;
     transition: .5s ease-in-out;
 }
@@ -33,10 +31,37 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    position: sticky;
-    position: -webkit-sticky;
     top: 70px;
     transition: .5s ease-in-out;
+    position: relative;
+}
+
+.btn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ffffff17;
+    z-index: 5;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+.btn1{
+    left: 5%;
+}
+.btn2{
+    right: 5%;
+}
+.btn svg{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    background: transparent;
+    transition: .3s ease-in-out;    
 }
 
 .slider::-webkit-scrollbar{
@@ -73,7 +98,7 @@
     height: 100%;
     opacity: 30%;
     /* aspect-ratio: 1/1; */
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 .slider img.active, .slider .element img:hover{

@@ -22,7 +22,7 @@
     padding: 10px 50px;
     width: 150px;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 25px;
     margin: 20px 0px;
     z-index: 1;
@@ -45,7 +45,7 @@
 .bb{
     width: 85%;
     background-color:#333847;
-    border-radius: 6px;
+    border-radius: 4px;
     margin-top: -40px;
     padding: 50px 0px;
     height: 550px;
@@ -62,7 +62,7 @@
 .box{
     width: 30px;
     height: 30px;
-    border-radius: 50%;
+    border-radius: 4px;
     background-color: #6E6EDE;
     margin-right: 30px;
 }

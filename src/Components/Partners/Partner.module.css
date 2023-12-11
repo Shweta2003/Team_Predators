@@ -39,7 +39,7 @@
 .mmar{
     width: 3px;
     height: 100%;
-    border-radius: 2px;
+    border-radius: 4px;
     background-color: var(--primary-color);
 }
 
@@ -67,7 +67,7 @@
     background-color: var(--green);
     padding: 10px 30px;
     color: white;
-    border-radius: 10px;
+    border-radius: 4px;
     margin-top: 40px;
     font-size: 15px;
 }
@@ -90,7 +90,7 @@
     padding: 20px;
     background-color: white;
     cursor: pointer;
-    border-radius: 9px;
+    border-radius: 4px;
     box-shadow: 6px 0px 18px 10px rgba(0, 0, 0, 0.45) inset;
 }
 
@@ -124,12 +124,12 @@
 
 .abs{
     margin: 40px 80px;
-    border-radius: 9px;
+    border-radius: 4px;
 }
 
 .ii{
     width: 130px;
-    border-radius: 9px;
+    border-radius: 4px;
     padding: 25px 10px;
 }
 
