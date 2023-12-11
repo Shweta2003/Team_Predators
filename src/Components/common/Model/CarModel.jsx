@@ -30,7 +30,7 @@ const CarModel = () => {
                     color={"#fff"}
                 />
                 <spotLight position={[3, 1, 0]} rotation={[0, 0, Math.PI / 2]} intensity={1} />
-                {/* <Car /> */}
+                <Car />
                 {/* <mesh position={[0, 2, 0]} castShadow={true}>
                     <boxGeometry args={[1, 1, 1]} />
                     <meshStandardMaterial color="#fff" />

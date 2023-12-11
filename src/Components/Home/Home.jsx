@@ -9,16 +9,19 @@ import { GetRecentPartner } from '../getdata/GetRecentPartner'
 import img from '../../Assets/cont.png'
 import Carousel from '../common/Carousel/Carousel'
 import CarModel from '../common/Model/CarModel'
+import partners from '../Partners/PertnerInfo'
+
 
 const Home = () => {
   const [slideImg, setSlide] = useState(null);
-  const [partnerInfo, getPartner] = useState(null);
+  const [partnerInfo, setPartnerInfo] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     // images for slider
     const data = GetHomeSlider();
     setSlide(data);
+    setPartnerInfo(partners);
   }, [])
 
   useEffect(() => {
@@ -119,13 +122,20 @@ const Home = () => {
         <h1 className={classes.hh1}>Partners</h1>
         <div className={classes.r}>
           <div className={classes.partner}>
-            {
-              (partnerInfo === null) ? <></>
-                : partnerInfo?.map((e, i) => {
-                  // console.log(e)
-                  return <img key={i} src={e.logo} className={classes.partr} onClick={() => window.open(`${e.link}`, '_blank')} alt='' />
+            <div className={classes.container}>
+              {
+                partnerInfo?.map((e, i) => {
+                  return <img key={i} src={e.ima} className={classes.partr} onClick={() => window.open(`${e.link}`, '_blank')} alt='' />
                 })
-            }
+              }
+            </div>
+            <div className={classes.container}>
+              {
+                partnerInfo?.map((e, i) => {
+                  return <img key={i} src={e.ima} className={classes.partr} onClick={() => window.open(`${e.link}`, '_blank')} alt='' />
+                })
+              }
+            </div>
           </div>
           <button className={classes.ab}>Become Partner</button>
 
