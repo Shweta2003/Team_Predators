@@ -14,3 +14,8 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>,
 );
+
+
+// TODO: insta media gallery
+// TODO: team cards
+// TODO: partners

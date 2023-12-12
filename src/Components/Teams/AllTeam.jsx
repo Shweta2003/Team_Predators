@@ -115,7 +115,7 @@ useEffect(() => {
 
       </div>
 
-      <div className={classes.year}>
+      <div clas2sName={classes.year}>
         <h3 className={classes.s}>YEAR</h3>
         <div className={classes.choose}>
           <button className={classes.c}><img src={arrow} alt='' className={classes.lArrow} onClick={() => changeYear("prev")}/></button>
@@ -128,32 +128,32 @@ useEffect(() => {
         </div>
       </div>
 
-          <h1 className={classes.teamName}>{(TeamsData !== null)? TeamsData.id : ""}</h1>
+          <h1 className={classes.teamName}>{(TeamsData !== null)? TeamsData?.id : ""}</h1>
       
         {
           (TeamsData !== null)?<div className={classes.teams}>
 
             <div className={classes.static}>
             {
-              (TeamsData.captain !== undefined)?<TeamCard name={TeamsData.captain.name} classN={TeamsData.captain.class} linkedin={TeamsData.captain.linkedin} img={TeamsData.captain.image} position="captain"/>
+              (TeamsData?.captain !== undefined)?<TeamCard name={TeamsData?.captain.name} classN={TeamsData?.captain.class} linkedin={TeamsData?.captain.linkedin} img={TeamsData?.captain.image} position="captain"/>
               :<></>
             }
             {
-              (TeamsData.vice_captain !== undefined)?<TeamCard name={TeamsData.vice_captain.name} classN={TeamsData.vice_captain.class} linkedin={TeamsData.vice_captain.linkedin} img={TeamsData.vice_captain.image} position="vice captain"/>
+              (TeamsData?.vice_captain !== undefined)?<TeamCard name={TeamsData?.vice_captain.name} classN={TeamsData?.vice_captain.class} linkedin={TeamsData?.vice_captain.linkedin} img={TeamsData?.vice_captain.image} position="vice captain"/>
               :<></>
             }
             {
-              (TeamsData.manager !== undefined)?<TeamCard name={TeamsData.manager.name} classN={TeamsData.manager.class} linkedin={TeamsData.manager.linkedin} img={TeamsData.manager.image} position="manager"/>
+              (TeamsData?.manager !== undefined)?<TeamCard name={TeamsData?.manager.name} classN={TeamsData?.manager.class} linkedin={TeamsData?.manager.linkedin} img={TeamsData?.manager.image} position="manager"/>
               :<></>
             }
             {
-              (TeamsData.Technical_Head !== undefined)?<TeamCard name={TeamsData.Technical_Head.name} classN={TeamsData.Technical_Head.class} linkedin={TeamsData.Technical_Head.linkedin} img={TeamsData.Technical_Head.image} position="technical head"/>
+              (TeamsData?.Technical_Head !== undefined)?<TeamCard name={TeamsData?.Technical_Head.name} classN={TeamsData?.Technical_Head.class} linkedin={TeamsData?.Technical_Head.linkedin} img={TeamsData?.Technical_Head.image} position="technical head"/>
               :<></>
             }
             </div>
             <div className={classes.mainTeam} id='teams'>
             {
-              TeamsData.subteams[selected]?.map((e) => {
+              TeamsData?.subteams[selected]?.map((e) => {
                 console.log(e)
                 return <TeamCard name={e.name} classN={e.class} linkedin={e.linkedin} img={e.image} position={selected}/>
               })

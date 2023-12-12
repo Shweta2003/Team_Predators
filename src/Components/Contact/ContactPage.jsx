@@ -1,10 +1,8 @@
 import React, { useState, useRef , useEffect} from 'react';
 import classes from './Contact.module.css';
-import top_img from '../../Assets/contact_back.png';
-import car from '../../Assets/car_img.png';
-import phone from '../../Assets/Phone.png';
-import email from '../../Assets/Gmail Logo.png';
-import map from '../../Assets/Map Marker.png';
+import phone from '../../Assets/phone.svg';
+import email from '../../Assets/gmail.svg';
+import map from '../../Assets/location.svg';
 import emailjs from '@emailjs/browser';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
@@ -57,39 +55,10 @@ const ContactPage = () => {
 
   return (
     <div className={classes.main}>
-      <div className={classes.in}><img className={classes.top_img} src={top_img} alt='' /></div>
-      <img className={classes.car} src={car} alt='' />
-
-      {/* left part */}
-      <div className={classes.contact_page} data-aos="fade-left">
-        <div className={classes.info}>
-          <img className={classes.icon} src={phone} alt='' />
-          <div className={classes.inte}>
-            <h3 className={classes.info_type}>Phone</h3>
-            <p className={classes.info_p}>+91 8788628267</p>
-          </div>
-        </div>
-
-        <div className={classes.info}>
-          <img className={classes.icon} src={email} alt='' />
-          <div className={classes.inte}>
-            <h3 className={classes.info_type}>Email</h3>
-            <p className={classes.info_p}>shwetamandalbm@gmail.com</p>
-          </div>
-        </div>
-
-        <div className={classes.info}>
-          <img className={classes.icon} src={map} alt='' />
-          <div className={classes.inte}>
-            <h3 className={classes.info_type}>Location</h3>
-            <p className={classes.info_p}>Dr. D. Y. Patil College Of Engineering, Akurdi</p>
-          </div>
-        </div>
-      </div>
 
       {/* main contact page */}
       <form name="myContact" className={classes.contactform} ref={form} onSubmit={sendEmail} data-aos="fade-right">
-        <h1 className={classes.main_head}>CONTACT US</h1>
+        <h1 className={classes.main_head}>Contact Us</h1>
         <div className={classes.out}>
           <label className={`${classes.label} ${(small[0] === true) ? classes.yes : classes.no}`}>Name</label>
           <input type='text' className={classes.input} required value={userdata
@@ -105,13 +74,34 @@ const ContactPage = () => {
           <input type='text' className={classes.input} required value={userdata
             .subject} onChange={(e) => setuserdata({ ...userdata, subject: e.target.value })} onFocus={() => changeMe(2, true)} onBlur={() => { check("subject", 2) }} name="from_subject"></input>
         </div>
-        <div className={classes.outa}>
+        <div className={classes.out}>
           <label className={`${classes.label} ${(small[3] === true) ? classes.yes : classes.no}`}>Message</label>
           <textarea className={classes.doit} required value={userdata
             .message} onChange={(e) => setuserdata({ ...userdata, message: e.target.value })} onFocus={() => changeMe(3, true)} onBlur={() => { check("message", 3) }} name="message" />
         </div>
         <input type='submit' className={classes.submit} data-aos="flip-up"/>
       </form>
+      {/* info */}
+      <div className={classes.contact_page} data-aos="fade-left">
+        <div className={classes.box}></div>
+        <h1 className={classes.info_head}>Info</h1>
+        <div className={classes.info}>
+          <img className={classes.icon} src={phone} alt='' />
+            <p className={classes.info_p}>+91 8788628267</p>
+        </div>
+
+        <div className={classes.info}>
+          <img className={classes.icon} src={email} alt='' />
+            <p className={classes.info_p}>shwetamandalbm@gmail.com</p>
+        </div>
+
+        <div className={classes.info}>
+          <img className={classes.icon} src={map} alt='' />
+            <p className={classes.info_p}>Dr. D. Y. Patil College Of Engineering, Akurdi</p>
+        </div>
+      </div>
+
+      
     </div>
   )
 }

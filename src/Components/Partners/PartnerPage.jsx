@@ -48,7 +48,7 @@ const PartnerPage = () => {
             <div className={classes.imp}>
                 {
                     MyInfo.map((item, index) => {
-                        return <Link to={`../partners/${item.link}`} className={classes.abs} style={{border:`3px solid ${item.color} `}} ><img src={item.ima.monster} alt='' className={classes.ii}/></Link>
+                        return <Link to={`../partners/${item.link}`} className={classes.abs} style={{border:`3px solid ${item.color} `}} ><img src={item.ima} alt='' className={classes.ii}/></Link>
                     })
                 }
             </div>

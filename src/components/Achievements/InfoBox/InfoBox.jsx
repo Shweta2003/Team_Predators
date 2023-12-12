@@ -7,17 +7,17 @@ import { motion } from 'framer-motion';
 const InfoBox = ({ details }) => {
     const [achievementData, setAchievementData] = useState([]);
 
-  useEffect(() => {
-    const fetchAchievementData = async () => {
-      if (details?.id ) {
-        const achievementRef = doc(db, 'achievements', details.id);
-        const data = await getDoc(achievementRef)
-        setAchievementData(data.data())
-      }
-    };
+    useEffect(() => {
+        const fetchAchievementData = async () => {
+            if (details?.id) {
+                const achievementRef = doc(db, 'achievements', details.id);
+                const data = await getDoc(achievementRef)
+                setAchievementData(data.data())
+            }
+        };
 
-    fetchAchievementData();
-  }, [details]);
+        fetchAchievementData();
+    }, [details]);
     return (
         <div className={classes.main}>
             <div className={classes.img}>
@@ -26,46 +26,57 @@ const InfoBox = ({ details }) => {
             <div className={classes.details}>
                 <h1>{achievementData.name}</h1>
                 <div className={classes.overview}>
-                    <div className={classes.box}>
-                        <h2>{achievementData.rank}</h2>
-                        <h3>Rank</h3>
-                    </div>
-                    <div className={classes.box}>
-                        <h2>{achievementData.points}</h2>
-                        <h3>Points</h3>
-                    </div>
-                    <div className={classes.box}>
-                        <h2>{achievementData.awards}</h2>
-                        <h3>Awards</h3>
-                    </div>
-                    <div className={classes.box}>
-                        <h2>{achievementData.year}</h2>
-                        <h3>Year</h3>
-                    </div>
+                    {achievementData.rank &&
+                        <div className={classes.box}>
+                            <h2>{achievementData.rank}</h2>
+                            <h3>Rank</h3>
+                        </div>
+                    }
+                    {
+                        achievementData.points &&
+                        <div className={classes.box}>
+                            <h2>{achievementData.points}</h2>
+                            <h3>Points</h3>
+                        </div>
+                    }
+                    {achievementData.awards &&
+                        <div className={classes.box}>
+                            <h2>{achievementData.awards}</h2>
+                            <h3>Awards</h3>
+                        </div>
+
+                    }
+                    {
+                        achievementData.year &&
+                        <div className={classes.box}>
+                            <h2>{achievementData.year}</h2>
+                            <h3>Year</h3>
+                        </div>
+                    }
                 </div>
                 <div className={classes.achievements}>
                     {
-                        (achievementData.competitions)?achievementData.competitions.map((current, idx) => {
+                        (achievementData.competitions) ? achievementData.competitions.map((current, idx) => {
                             return <div className={classes.out}>
                                 <p className={classes.see}>{current.name}</p>
                                 {
-                                    current.value.map((e,idx) => {
+                                    current.value.map((e, idx) => {
                                         return <motion.div
-                                        initial={{opacity: 0,}}
-                                        animate={{opacity: 1,}}
-                                        transition={{delay: idx/5}}
-                                        key={idx} className={classes.achievement}>
-                                        <p>{e.name} <i> {e.rank}</i></p>
-                                    </motion.div>
-            
+                                            initial={{ opacity: 0, }}
+                                            animate={{ opacity: 1, }}
+                                            transition={{ delay: idx / 5 }}
+                                            key={idx} className={classes.achievement}>
+                                            <p>{e.name} <i> {e.rank}</i></p>
+                                        </motion.div>
+
                                     })
                                 }
                             </div>
                         }
-                        
+
                         )
-                       
-                    :<div></div>
+
+                            : <div></div>
                     }
                     {/* {achievementData.achievements.map((current, idx) =>
                         <motion.div

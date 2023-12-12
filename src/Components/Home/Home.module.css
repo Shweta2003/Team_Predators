@@ -158,7 +158,7 @@
     padding: 10px;
     opacity: 0.8;
     left: 410px;
-    border-radius: 50%;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -211,10 +211,28 @@
 .partner {
     width: 100%;
     display: flex;
+    overflow-x: hidden;
     background: none;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    /* border: 2px aqua solid; */
+}
+
+.partner .container {
+    background: none;
+    flex-shrink: 0;
+    /* border: 2px solid green; */
+    width: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+    
 }
 
 .hh1 {
@@ -224,9 +242,10 @@
 }
 
 .partr {
-    background-color: var(--box-color);
+    /* background-color: var(--box-color); */
+    background: none;
     padding: 40px;
-    width: 90px;
+    height: 100px;
     cursor: pointer;
 }
 
