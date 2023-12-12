@@ -122,7 +122,7 @@ const Home = () => {
             {
               (partnerInfo === null) ? <></>
                 : partnerInfo?.map((e, i) => {
-                  // console.log(e)
+                  console.log(e)
                   return <img key={i} src={e.logo} className={classes.partr} onClick={() => window.open(`${e.link}`, '_blank')} alt='' />
                 })
             }

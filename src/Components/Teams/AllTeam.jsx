@@ -21,17 +21,26 @@ const AllTeam = () => {
   const [selected, setSelected] = useState('transmission')
   const [Degree, setDegree] = useState(-90)
   const [scalei,setScale] = useState(1)
-  const [yearStr, setYear] = useState(date.getFullYear() + 1)
+  const [yearStr, setYear] = useState(date.getFullYear())
   const [TeamsData, setTeamsData] = useState(null)
 
   useEffect(() => {
     async function fetchData() {
+      var Data = []
         try {
-            const Data = await GetTeamsData(yearStr.toString());
-            setTeamsData(Data[0]);
+            Data = await GetTeamsData(yearStr.toString());
+            if(Data.length === 0){
+              setYear(yearStr - 1);
+              Data = await GetTeamsData(yearStr.toString());
+            }
 
         } catch (error) {
-            console.log("Error fetching data:", error);
+            setYear(yearStr - 1);
+            Data = await GetTeamsData(yearStr.toString());
+            
+        }
+        finally{
+          setTeamsData(Data[0]);
         }
     }
     fetchData();
@@ -59,7 +68,7 @@ useEffect(() => {
 
   const changeYear = (e) => {
     if(e === "next"){
-      if(yearStr === (date.getFullYear() + 1)){
+      if(yearStr === (date.getFullYear())){
         return;
       }
       else{
@@ -82,7 +91,7 @@ useEffect(() => {
       <div className={classes.div}>
 
         <button className={classes.a1} onClick={() => HandleClick('brakes')}><Brakes bgColor={`${(selected !== 'brakes')?"white" : "#137210"}`} frColor={`${(selected !== 'brakes')?"black" : "white"}`}/>
-        <p className={classes.p} style={{color:`${(selected !== 'brakes')?"white":"#17E31F"}`}}>Chassis</p></button>
+        <p className={classes.p} style={{color:`${(selected !== 'brakes')?"white":"#17E31F"}`}}>Brakes</p></button>
 
         <button className={classes.a2} onClick={() => HandleClick('sales')}><SalesMarketing bgColor={`${(selected !== 'sales')?"white" : "#137210"}`} frColor={`${(selected !== 'sales')?"black" : "white"}`}/>
         <p className={classes.p} style={{color:`${(selected !== 'sales')?"white":"#17E31F"}`}}>Marketing</p></button>

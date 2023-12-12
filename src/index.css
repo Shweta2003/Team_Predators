@@ -17,6 +17,7 @@
     --green: #0c7808;
     --box-color: #333847;
     --new-color: #0c7808;
+    --light-green: rgba(23,227,31,1);
 }
 
 html::-webkit-scrollbar {
