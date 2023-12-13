@@ -70,17 +70,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--box-color);
+    margin-bottom: 40px;
 }
 
 .im {
     width: 50%;
     padding-bottom: 60px;
+    background: none;
 }
 
 .img1,
 .img2 {
     width: 350px;
     height: 250px;
+    background: none;
 }
 
 .img1 {
@@ -99,23 +103,27 @@
 .do {
     width: 50%;
     padding: 40px;
+    background: none;
 }
 
 .p {
     color: var(--new-color);
     font-size: 25px;
     margin-bottom: -20px;
+    background: none;
 }
 
 .h2 {
     color: white;
     padding: 30px 0px;
     font-size: 50px;
+    background: none;
 }
 
 .details {
     color: white;
     font-size: 20px;
+    background: none;
 }
 
 .btn {
@@ -126,6 +134,7 @@
     border: 3px solid var(--green);
     border-radius: 4px;
     cursor: pointer;
+    background-color: black;
 }
 
 /* slider */
@@ -236,7 +245,7 @@
 }
 
 .hh1 {
-    color: rgba(227, 191, 255, 0.75);
+    color: var(--light-green);
     font-size: 50px;
     margin-bottom: 40px;
 }
@@ -263,10 +272,23 @@
 .part6 {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 200px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.getpart1, .getpart2{
+    width: 45%;
+    padding: 50px;
+
+}
+
+.getpart1{
+    text-align: right;
+}
+
+.getpart2{
+    text-align: left;
 }
 
 .contact {
@@ -277,19 +299,9 @@
     justify-content: center;
 }
 
-.ccc {
-    width: 50%;
-    object-fit: scale-down;
-}
-
-.cd {
-    width: 35%;
-}
-
 .cp {
     color: white;
-    font-size: 50px;
-    font-weight: bolder;
+    font-size: 20px;
 }
 
 @media (max-width: 850px) {

@@ -10,6 +10,7 @@ import img from '../../Assets/cont.png'
 import Carousel from '../common/Carousel/Carousel'
 import CarModel from '../common/Model/CarModel'
 import partners from '../Partners/PertnerInfo'
+import GotoCard from './GotoCard'
 
 
 const Home = () => {
@@ -53,7 +54,7 @@ const Home = () => {
           <CarModel />
         </div>
         <div className={classes.scrollOverlay} id="scrollO" >
-          <div className={classes.scrollDiv}>
+          {/* <div className={classes.scrollDiv}>
             <section style={{ "--top": "500px", "--left": "500px" }} className='section'>
               <h1>
                 BAJA
@@ -61,7 +62,7 @@ const Home = () => {
               <p>
                 BAJA SAE is an inter collegiate off-road competition run by the Society of Automotive Engineers. It challenges engineering students to design, build and race an off-road vehicle that can withstand the toughest elements of rough terrain.
               </p>
-            </section >
+            </section > 
             <section style={{ "--top": "500px", "--left": "500px" }} className='section'>
               <h1>
                 WE
@@ -88,8 +89,11 @@ const Home = () => {
                 Contribute to a cause, Be a Predator with us.
               </p>
             </section>
-          </div>
+          </div> */}
         </div>
+      </div>
+      <div className={classes.checking}>
+      <GotoCard/>
       </div>
       {/* what we do */}
       <div className={classes.part2}>
@@ -99,15 +103,15 @@ const Home = () => {
         </div>
         <div className={classes.do}>
           <p className={classes.p}>What we do</p>
-          <h2 className={classes.h2}>Gallery: 2023 Ford Mustang Mach-E (Euro-spec)</h2>
-          <p className={classes.details}>Ford also introduces a new slogan as part of its marketing revamp. The new slogan is called "Adventurous Spirit," which, according to the company, stands for the American values of "freedom, outdoors, and adventure."</p>
-          <Link to={'./contact'} style={{ textDecoration: "none" }}><button className={classes.btn}>Contact Us</button></Link>
+          <h2 className={classes.h2}>We believe, we create</h2>
+          <p className={classes.details}>Team Predators Racing competes in BAJA  i.e. a collegiate design competition held by SAE which challenges engineering students to build off-road vehicles capable of withstanding rugged terrain. We participate in BAJA SAEINDIA and BAJA SAE International to fuel our passion for creating an All-Terrain Vehicle which has the capability to Win.</p>
+          <Link to={'./moments'} style={{ textDecoration: "none" }}><button className={classes.btn}>View More</button></Link>
         </div>
       </div>
 
       {/* achievement slider */}
       <div className={classes.part3}>
-        <h1 className={classes.hh}>ACHIEVEMENTS</h1>
+        <h1 className={classes.hh1}>ACHIEVEMENTS</h1>
         <Carousel />
       </div>
 
@@ -142,14 +146,20 @@ const Home = () => {
         </div>
       </div>
 
-      {/* contact us */}
+      {/* women in BAJA */}
       <div className={classes.part6}>
-        <h1 className={classes.hh1}>Contact Us</h1>
+        <div className={classes.getpart1}>
+        <h1 className={classes.hh}>Who We Are</h1>
         <div className={classes.contact}>
-          <img src={img} className={classes.ccc} alt='' />
-          <div className={classes.cd}>
-            <p className={classes.cp}>Contact us for any query or inquiry</p>
+            <p className={classes.cp}>We unite under a shared racing spirit and dedication to collaboratively create a well engineered vehicle with fine-tuning for peak performance and aim to secure a top rank in the Baja SAE competition. We are a group of highly passionate, hardworking and enthusiastic students who found their interest in off-roading and rose towards becoming a predator.</p>
             <Link to={'./contact'} style={{ textDecoration: "none" }}><button className={classes.btn}>Contact Us</button></Link>
+        </div>
+        </div>
+        <div className={classes.getpart2}>
+        <h1 className={classes.hh}>Women in BAJA</h1>
+        <div className={classes.contact}>
+            <p className={classes.cp}>Women Empowerment is about changing the way women are perceived in society. The women of BAJA, have been breaking boundaries and are setting the bar high in terms of contribution and technical expertise in motorsports. They have contributed to female representation in every single aspect!</p>
+            <Link to={'./contact'} style={{ textDecoration: "none" }}><button className={classes.btn}>View More</button></Link>
           </div>
         </div>
       </div>
