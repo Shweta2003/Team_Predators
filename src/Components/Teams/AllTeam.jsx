@@ -26,13 +26,21 @@ const AllTeam = () => {
 
   useEffect(() => {
     async function fetchData() {
+      var Data = []
         try {
-            const Data = await GetTeamsData(yearStr.toString());
-            console.log(Data[0]);
-            setTeamsData(Data[0]);
+            Data = await GetTeamsData(yearStr.toString());
+            if(Data.length === 0){
+              setYear(yearStr - 1);
+              Data = await GetTeamsData(yearStr.toString());
+            }
 
         } catch (error) {
-            console.log("Error fetching data:", error);
+            setYear(yearStr - 1);
+            Data = await GetTeamsData(yearStr.toString());
+            
+        }
+        finally{
+          setTeamsData(Data[0]);
         }
     }
     fetchData();
@@ -42,7 +50,7 @@ useEffect(() => {
   (window.innerWidth < 850)?(window.innerWidth < 450)?setScale(0.35)
   :setScale(0.6)
   :setScale(1)
-},[window.innerWidth])
+},[])
 
 
   const HandleClick = (e) => {
@@ -60,7 +68,7 @@ useEffect(() => {
 
   const changeYear = (e) => {
     if(e === "next"){
-      if(yearStr === (date.getFullYear() + 1)){
+      if(yearStr === (date.getFullYear())){
         return;
       }
       else{

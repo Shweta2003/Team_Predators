@@ -103,11 +103,11 @@
 }
 
 .s{
-    color: #ffffff;
     font-size: 40px;
-    padding-top: 20px;
+    padding-top: 50px;
     color: var(--accent-color);
     background: none;
+    text-align: center;
 }
 
 .year{
@@ -157,7 +157,7 @@
 }
 
 .teamName{
-    color: #6E6EDE;
+    color: orange;
     font-size: 50px;
     margin: 50px;
 }
@@ -198,7 +198,8 @@
     font-weight: bold;
     font-size: 17px;
     padding: 6px;
-    background-color: #D9B7F3;
+    color: white;
+    background-color: var(--accent-color);
     text-transform: uppercase;
 
 }

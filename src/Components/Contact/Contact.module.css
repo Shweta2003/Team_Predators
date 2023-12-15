@@ -1,116 +1,69 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
-.main {
-    display: flex;
+.main{
     width: 100%;
-    overflow-x: hidden;
-    flex-direction: column;
-}
-
-.in {
-    background-color: aliceblue;
-    margin: 0%;
-    padding: 0%;
-    height: 200px;
-}
-
-.top_img {
-    width: 100%;
-    height: 200px;
-    opacity: 0.6;
-    background-color: rgb(255, 255, 255);
-}
-
-.car {
-    position: absolute;
-    top: 50px;
-    left: 60px;
-    scale: 0.9;
-    background: none;
-}
-
-.contact_page {
-    margin-left: 150px;
-    margin-top: 300px;
     display: flex;
-    flex-direction: column;
-    height: 260px;
-    width: 40%;
-    justify-content: space-evenly;
-    margin-bottom: 100px;
-    background: none;
-}
-
-.info {
-    display: flex;
-    width: 100%;
-    background: none;
-
-}
-
-.inte {
-    margin-left: 50px;
-    background: none;
-}
-
-.info_type {
-    font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    color: var(--accent-color);
-    padding: 5px;
-    font-size: 20px;
-    background: none;
-}
-
-.info_p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 17px;
+    justify-content: space-between;
     color: white;
-    background: none;
+    margin-bottom: 100px;
+    overflow-x: hidden;
 }
 
-.icon{
-    background: none;
-}
-
-.contactform {
-    top: 150px;
+.contactform{
+    margin-top: 100px;
+    width: 40%;
+    padding: 0px 100px;
     display: flex;
-    position: absolute;
     flex-direction: column;
-    font-family: 'Inter', sans-serif;
-    box-shadow: #0c7808 8px 8px 10px 2px;
-    right: 150px;
-    width: 35%;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 20px;
-    border: 2px solid var(--accent-color);
-    background: none;
-    padding: 30px;
+    justify-content: space-between;
+    height: max-content;
+}
 
+.main_head{
+    width:100%;
+    padding-left: 100px;
+    font-size: 70px;
+    font-weight: 700;
+    margin-top: -60px;
+    margin-bottom: 0px;
+    font-family:'Inter', sans-serif;
+}
+
+.out{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: flex-end;
+    margin-top: 50px;
 }
 
 .label {
-    font-size: 25px;
+    font-size: 30px;
     max-height: 30px;
     transition: 0.2s;
     font-weight: 500;
+    padding-left: 10px;
     font-family: 'Inter', sans-serif;
     width: 80%;
-    margin-bottom: -35px;
+    margin-bottom: -30px;
     color: var(--accent-color);
     background: none;
 }
 
-.input,
-.doit {
-    width: 80%;
-    font-size: 25px;
+.label.yes {
+    font-size: 20px;
+    transition-duration: 0.2s;
+    margin-bottom: 0px;
+}
+
+.input, .doit{
+    width: 100%;
+    font-size: 30px;
     font-family: 'Inter', sans-serif;
     padding: 5px 10px;
     font-weight: 300;
@@ -118,196 +71,187 @@
     border: none;
     border-bottom: 2px solid var(--accent-color);
     outline: none;
-    margin-bottom: 20px;
     color: white;
 }
 
-.label.yes {
-    font-size: 15px;
-    transition-duration: 0.2s;
-    margin-bottom: -5px;
+.submit{
+    width: 103%;
+    margin-left: 17px;
+    background: var(--primary-color);
+    border: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 17px;
+    color: white;
+    border-radius: 4px;
+    margin-top: 60px;
 }
 
-.submit {
-    width: 200px;
-    font-size: 25px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    padding: 7px;
-    color: var(--accent-color);
-    border-radius: 15px;
-    border: 2px solid var(--accent-color);
-    background: none;
-    margin-bottom: 30px;
-}
-
-.main_head {
-    font-size: 50px;
-    font-family: 'Inter', sans-serif;
-    margin-bottom: 80px;
-    background: none;
-}
-
-.out,
-.outa {
-    width: 100%;
+.contact_page{
+    background-color: var(--box-color);
+    padding: 60px;
+    width: 30%;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 60px;
-    margin-bottom: 23px;
+    padding-bottom: 160px;
+}
+
+.box{
+    width: 90px;
+    height: 90px;
+    margin-left: -100px;
+    margin-top: -100px;
+    background-color: var(--primary-color);
+}
+
+.info_head{
+    font-size: 60px;
+    margin: 30px 0px;
+    width: 100%;
+    text-align: center;
     background: none;
 }
 
-.doit {
-    height: 120px;
+.info{
+    background: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 
-.outa {
-    height: 150px;
+.icon{
+    background: none;
+    width: 50px;
+    padding-left: 30px;
+    padding-right: 60px;
+    padding-top: 60px;
+}
+
+.info_p{
+    background: none;
+    padding-top: 60px;
+    width: 250px;
+    font-size: large;
+}
+
+.doit::-webkit-scrollbar{
+    width: 20px;
 }
 
 
 /* responsive */
 @media (max-width: 1350px) {
-    .car {
-        left: -70px;
-        scale: 0.7;
-        top: 200px;
+    .main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    .main {
-        margin-bottom: 700px;
+    .contactform{
+        width: 70%;
+        padding: 0%;
     }
 
-    .top_img {
-        opacity: 1;
+    .main_head{
+        text-align: center;
+        padding-left: 0px;
     }
 
-    .contact_page {
-        margin-top: 50px;
-        margin-left: auto;
-        margin-right: 50px;
+    .input{
+        width: 97%;
     }
 
-    .contactform {
-        width: 75%;
-        top: 660px;
-        right: 95px;
-        padding: 10px;
+    .doit{
+        width: 97%;
     }
 
-    .main_head {
-        color: aliceblue;
-        margin-top: 40px;
-        margin-bottom: 40px;
+    .contact_page{
+        width: 50%;
+    }
+
+    .submit{
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .icon{
+        padding-left: 0px;
     }
 }
 
 @media (max-width: 750px) {
 
-    .top_img {
-        width: 100%;
-        object-fit: contain;
-        height: auto;
+    .main_head{
+        font-size: 47px;
+        margin-bottom: 30px;
     }
 
-    .in {
-        width: 100vw;
-        height: 10px;
-    }
 
-    .main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
-    .car {
-        position: relative;
-        padding: 0px;
-        left: 0px;
-        top: 0px;
-        scale: 0.5;
-        width: 100%;
-        height: 100%;
+    .out{
+        height: 50px;
         margin-top: 30px;
-        margin-bottom: 100px;
-
     }
 
-    .contact_page {
-        position: relative;
-        margin: 0px;
-        margin-top: -100px;
-        margin-bottom: 40px;
-        width: 85%;
-        top: 0px;
-        right: 0px;
-        left: 0px;
+    .label{
+        font-size: 25px;
+        margin-bottom: -35px;
+        padding-left: 5px;
     }
 
-    .info_type {
-        font-size: 17px;
-        font-weight: 500;
-    }
-
-    .info_p {
+    .label.yes{
         font-size: 15px;
-        font-weight: 300;
+        margin-bottom: -5px;
+    }
+
+    .info{
+        padding: 40px;
+    }
+
+    .input{
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .submit{
+        padding: 10px;
+    }
+
+    .contact_page{
+        padding: 0px;
+        width: 80%;
+        padding-bottom: 40px;
+    }
+
+    .box{
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+        margin-left: -25px;
+    }
+
+    .info_head{
+        font-size: 45px;
+        margin: 20px 0px;
+    }
+
+    .info{
         width: 100%;
+        padding: 0%;
+        padding: 20px;
     }
 
-    .icon {
-        scale: 0.7;
-
+    .icon{
+        padding: 0px;
+        width: 30px;
+        padding-right: 20px;
     }
 
-    .contactform {
-        position: relative;
-        top: 0px;
-        right: 0px;
-    }
-
-    .main_head {
-        font-size: 30px;
-        margin-top: 30px;
-    }
-
-    .label {
-        font-size: 20px;
-        margin-bottom: -20px;
-    }
-
-    .label.yes {
-        font-size: 12px;
-        margin-bottom: 5px;
-    }
-
-    .input,
-    .doit {
-        font-size: 17px;
+    .info_p{
+        font-size: 15px;
+        overflow-x: hidden;
+        padding: 0%;
         width: 70%;
     }
-
-    .inte {
-        margin-left: 10px;
-    }
-
-    .out {
-        margin-bottom: 15px;
-    }
-
-    .outa {
-        height: 150px;
-    }
-
-    .submit {
-        font-size: 20px;
-        width: 60%;
-    }
+    
 }
